@@ -1,13 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>WebRtc</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>WebRtc</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <link rel="import" href="./app//shared/header/header.component.html" />
+  </head>
+  <body>
+    <app-root></app-root>
+    <script>
+      let toggle = false;
+      $(document).ready(function () {
+        $("#menu-bar").on("click", function () {
+          $(".sidenav").toggleClass("active");
+          $(".menu-items").toggleClass("change");
+          if (toggle == false) {
+            $(".side-bar-content").hide();
+            toggle = true;
+          } else {
+            setTimeout(() => {
+              $(".side-bar-content").show();
+            }, 300);
+            toggle = false;
+          }
+          if (toggle) {
+            $(".sidenav").hover(
+              function () {
+                console.log("in");
+              },
+              function () {
+                console.log("out");
+              }
+            );
+            console.log("yes");
+          } else {
+            console.log("no");
+          }
+        });
+      });
+    </script>
+  </body>
 </html>

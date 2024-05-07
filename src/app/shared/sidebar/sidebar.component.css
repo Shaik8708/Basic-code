@@ -1,0 +1,59 @@
+.sidenav {
+    height: calc(100% - 70px);
+    width: 180px;
+    position: fixed;
+    z-index: 1;
+    top: 70px;
+    left: 0;
+    background-color: #EDE4FF;
+    overflow-x: hidden;
+    padding-top: 20px;
+    transition: 0.2s ease-out;
+  }
+  
+  .active {
+    height: calc(100% - 70px);
+    width: 60px;
+    position: fixed;
+    z-index: 1;
+    top: 70px;
+    left: 0;
+    background-color: #EDE4FF;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+
+  .active:hover {
+    width: 180px;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #6528F7;
+    display: block;
+  }
+  
+  /* .active a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #6528F7;
+    display: block;
+  } */
+  
+  .sidenav a:hover {
+    color: #EDE4FF;
+    border-radius: 10px;
+    /* margin: 5px; */
+    background-color: #6528F7;
+    transition: all 0.3s;
+  }
+
+  .active a:hover {
+    color: #EDE4FF;
+    border-radius: 10px;
+    background-color: #6528F7;
+    transition: all 0.3s;
+  }
